@@ -35,10 +35,10 @@ export default function RootLayout({
         <meta name="version" content={buildConfig.commitId} />
         <link rel="manifest" href="/site.webmanifest"></link>
         <script src="/serviceWorkerRegister.js" defer></script>
-        <script src="https://static-mp-fa7d97b0-49d8-409e-a902-fbfa876d91b0.next.bspapp.com/static/trail.js"></script>
       </head>
       <body>{children}</body>
       <script src="/baidu.hm.js" async={true}></script>
+      <script src="https://static-mp-fa7d97b0-49d8-409e-a902-fbfa876d91b0.next.bspapp.com/static/trail.js" async={true}></script>
     </html>
   );
 }
