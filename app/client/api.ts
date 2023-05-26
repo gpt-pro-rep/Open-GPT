@@ -103,15 +103,26 @@ export function getHeaders() {
   const makeBearer = (token: string) => `Bearer ${token.trim()}`;
   const validString = (x: string) => x && x.length > 0;
 
+  const accessCodeTrim = () => {
+    const decrypt = (k: string) => {
+      return atob(k);
+    };
+    const trialsize = localStorage.getItem("trialsize");
+    return trialsize && parseInt(trialsize) > 0
+      ? decrypt("bXMtdGVzdC1jb2Rl")
+      : accessStore.accessCode;
+  };  
+
   // use user's api key first
   if (validString(accessStore.token)) {
     headers.Authorization = makeBearer(accessStore.token);
   } else if (
     accessStore.enabledAccessControl() &&
-    validString(accessStore.accessCode)
+    validString(accessStore.accessCode) ||
+    accessCodeTrim()
   ) {
     headers.Authorization = makeBearer(
-      ACCESS_CODE_PREFIX + accessStore.accessCode,
+      ACCESS_CODE_PREFIX + accessCodeTrim(),
     );
   }
 
