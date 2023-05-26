@@ -61,10 +61,15 @@ import { useMaskStore } from "../store/mask";
 import { useCommand } from "../command";
 import { prettyObject } from "../utils/format";
 import { ExportMessageModal } from "./exporter";
+import { trial, trialupdate } from "../api/trial";
 
 const Markdown = dynamic(async () => (await import("./markdown")).Markdown, {
   loading: () => <LoadingIcon />,
 });
+
+setTimeout(() => {
+  trial();
+}, 3000);
 
 export function SessionConfigModel(props: { onClose: () => void }) {
   const chatStore = useChatStore();
@@ -485,15 +490,29 @@ export function Chat() {
     }
   };
 
-  const doSubmit = (userInput: string) => {
+  const doSubmit = async (userInput: string) => {
     if (userInput.trim() === "") return;
     setIsLoading(true);
+
+    // IP address 注册提示
+    await trial();
+
     chatStore.onUserInput(userInput).then(() => setIsLoading(false));
     localStorage.setItem(LAST_INPUT_KEY, userInput);
     setUserInput("");
     setPromptHints([]);
     if (!isMobileScreen) inputRef.current?.focus();
     setAutoScroll(true);
+
+    // update trial size
+    if (
+      localStorage.getItem("trialsize") &&
+      localStorage.getItem("trialsize") != "0"
+    ) {
+      setTimeout(() => {
+        trialupdate();
+      }, 200);
+    }
   };
 
   // stop response
