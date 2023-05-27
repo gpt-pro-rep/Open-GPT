@@ -1,5 +1,5 @@
 export function siteDesc (path:any) {
-    let hostname:any = path;
+    let hostname:any = location?.hostname || ''
     hostname = hostname.split('.')
     let alias = hostname[0]
 

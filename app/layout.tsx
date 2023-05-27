@@ -7,7 +7,7 @@ import { getBuildConfig } from "./config/build";
 const buildConfig = getBuildConfig();
 
 import {siteDesc} from './config/siteDesc'
-const siteDescConfig:any = siteDesc(location.hostname)
+const siteDescConfig:any = siteDesc()
 
 export const metadata = {
   title: siteDescConfig.proName,
