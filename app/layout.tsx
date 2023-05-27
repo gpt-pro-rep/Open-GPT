@@ -10,7 +10,7 @@ import {siteDesc} from './api/siteDesc'
 const siteDescConfig:any = siteDesc()
 
 export const metadata = {
-  title: siteDescConfig.proName + siteDescConfig.proDesc,
+  title: siteDescConfig.proName + ' ' + siteDescConfig.proDesc,
   description: "Your personal ChatGPT Chat Bot.",
   viewport: {
     width: "device-width",
@@ -22,7 +22,7 @@ export const metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#151515" },
   ],
   appleWebApp: {
-    title: siteDescConfig.proName + siteDescConfig.proDesc,
+    title: siteDescConfig.proName + ' ' + siteDescConfig.proDesc,
     statusBarStyle: "default",
   },
 };
@@ -32,6 +32,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  localStorage.setItem('siteDescConfig', JSON.stringify(siteDescConfig))
   return (
     <html lang="en">
       <head>
