@@ -1,8 +1,10 @@
 import { useRouter } from 'next/router';
-const router = useRouter();
 
-export function siteDesc () {
-    let hostname:any = router.basePath
+export const siteDesc = () => {
+    const router = useRouter();
+    const { href } = router;
+
+    let hostname:any = href
     console.log(hostname)
     hostname = hostname.split('.')
     let alias:string = hostname[0]
