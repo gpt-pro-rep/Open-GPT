@@ -6,8 +6,11 @@ import { getBuildConfig } from "./config/build";
 
 const buildConfig = getBuildConfig();
 
+import siteDesc from './sitedesc'
+const siteDescConfig = siteDesc()
+
 export const metadata = {
-  title: "Open-GPT",
+  title: siteDescConfig.proName,
   description: "Your personal ChatGPT Chat Bot.",
   viewport: {
     width: "device-width",
@@ -19,7 +22,7 @@ export const metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#151515" },
   ],
   appleWebApp: {
-    title: "Open-GPT",
+    title: siteDescConfig.proName,
     statusBarStyle: "default",
   },
 };

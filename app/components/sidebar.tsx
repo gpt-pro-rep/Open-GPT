@@ -29,6 +29,9 @@ import { useMobileScreen } from "../utils";
 import dynamic from "next/dynamic";
 import { showToast } from "./ui-lib";
 
+import siteDesc from '../config/sitedesc'
+const siteDescConfig = siteDesc()
+
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
   loading: () => null,
 });
@@ -120,9 +123,9 @@ export function SideBar(props: { className?: string }) {
       }`}
     >
       <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>Open-GPT</div>
+        <div className={styles["sidebar-title"]}>{siteDescConfig.proName}</div>
         <div className={styles["sidebar-sub-title"]}>
-          开放版·直连GPT聊天机器人
+          {siteDescConfig.proDesc}
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />

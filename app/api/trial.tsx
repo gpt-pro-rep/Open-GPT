@@ -1,9 +1,12 @@
 import axios from "axios";
-const baseUrl =
-  process.env.TRIAL_URL ||
-  "https://fc-mp-fa7d97b0-49d8-409e-a902-fbfa876d91b0.next.bspapp.com";
 import { showModal, showToast } from "../components/ui-lib";
 import { IconButton } from "../components/button";
+import siteDesc from '../config/sitedesc'
+const siteDescConfig = siteDesc()
+
+const baseUrl =
+  siteDescConfig.apiUrl ||
+  "https://fc-mp-fa7d97b0-49d8-409e-a902-fbfa876d91b0.next.bspapp.com";
 
 export const trial = async () => {
   let accessControl: any = localStorage.getItem("access-control") || "{}";
