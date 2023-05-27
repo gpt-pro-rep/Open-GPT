@@ -20,5 +20,14 @@ export const siteDesc = () => {
             proPayUrl: 'https://e.northviewer.cn/wp-content/uploads/2023/05/code.png',
         }
     }
-   
+}
+
+export const getConfigItemFiled = (item: string) => {
+    let val:string = ''
+    if (process.browser) {
+        const descInfo:any = document.getElementById('descInfo')
+        const fields:any = JSON.parse(descInfo.getAttribute('content') || {})
+        val = fields(item)
+    }
+    return val
 }

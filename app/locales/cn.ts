@@ -1,6 +1,6 @@
 import { SubmitKey } from "../store/config";
 
-import {siteDesc} from '../api/siteDesc'
+import {siteDesc,getConfigItemFiled} from '../api/siteDesc'
 const siteDescConfig:any = siteDesc()
 
 const cn = {
@@ -10,7 +10,7 @@ const cn = {
 
 微信扫一扫，获取访问密码： 
 
-![alt 微信扫一扫](${siteDescConfig.proPayUrl})`,
+![alt 微信扫一扫](${getConfigItemFiled('proPayUrl')})`,
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 条对话`,
