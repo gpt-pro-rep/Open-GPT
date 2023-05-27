@@ -1,14 +1,5 @@
-import React, { useEffect } from 'react';
-
-
 export function siteDesc () {
-    let hostname:any = ''
-    
-    useEffect(() => {
-        hostname:any = location.hostname
-        console.log(hostname)
-    }, []);
-
+    let hostname:any = location.hostname
     hostname = hostname.split('.')
     let alias:string = hostname[0]
 
