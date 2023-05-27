@@ -1,4 +1,7 @@
 import { SubmitKey } from "../store/config";
+
+import { getBuildConfig } from "../config/build";
+const buildConfig = getBuildConfig();
 import {siteDesc} from '../api/siteDesc'
 const siteDescConfig:any = siteDesc()
 

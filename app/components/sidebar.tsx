@@ -29,6 +29,8 @@ import { useMobileScreen } from "../utils";
 import dynamic from "next/dynamic";
 import { showToast } from "./ui-lib";
 
+import { getBuildConfig } from "../config/build";
+const buildConfig = getBuildConfig();
 import {siteDesc} from '../api/siteDesc'
 const siteDescConfig:any = siteDesc()
 
