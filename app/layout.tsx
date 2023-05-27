@@ -37,7 +37,7 @@ export default function RootLayout({
       <head>
         <meta name="version" content={buildConfig.commitId} />
         <link rel="manifest" href="/site.webmanifest"></link>
-        <mata id="descInfo" name="author" content={JSON.stringify(siteDescConfig)} />
+        <meta id="descInfo" name="author" content={JSON.stringify(siteDescConfig)} />
         <script src="/serviceWorkerRegister.js" defer></script>
       </head>
       <body>{children}</body>
