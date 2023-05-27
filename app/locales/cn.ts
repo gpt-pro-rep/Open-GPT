@@ -1,5 +1,7 @@
 import { SubmitKey } from "../store/config";
 
+import {getConfigItemFiled} from '../api/siteDesc'
+
 const cn = {
   WIP: "该功能仍在开发中……",
     Error: {
@@ -7,7 +9,7 @@ const cn = {
 
 微信扫一扫，获取访问密码： 
 
-![alt 微信扫一扫](https://e.northviewer.cn/wp-content/uploads/2023/05/code.png)`,
+![alt 微信扫一扫](${getConfigItemFiled('proPayUrl')})`,
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 条对话`,
