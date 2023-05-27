@@ -9,6 +9,7 @@ services:
     environment:
       - OPENAI_API_KEY=$OPENAI_API_KEY
       - CODE=$CODE
+      - HOST_NAME=$HOST_NAME
       - BASE_URL=$BASE_URL
       - OPENAI_ORG_ID=$OPENAI_ORG_ID
       - HIDE_USER_API_KEY=$HIDE_USER_API_KEY
@@ -23,6 +24,7 @@ services:
     environment:
       - OPENAI_API_KEY=$OPENAI_API_KEY
       - CODE=$CODE
+      - HOST_NAME=$HOST_NAME
       - PROXY_URL=$PROXY_URL
       - BASE_URL=$BASE_URL
       - OPENAI_ORG_ID=$OPENAI_ORG_ID
