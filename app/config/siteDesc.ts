@@ -1,7 +1,7 @@
-export function siteDesc (path:any) {
+export function siteDesc () {
     let hostname:any = location?.hostname || ''
     hostname = hostname.split('.')
-    let alias = hostname[0]
+    let alias:string = hostname[0]
 
     switch (alias) {
         case 'gpt': return {
