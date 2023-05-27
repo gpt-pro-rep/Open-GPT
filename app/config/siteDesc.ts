@@ -1,6 +1,6 @@
 export function siteDesc () {
     let hostname:any = ['']
-    if (typeof location !== 'undefined') {
+    if (typeof location != undefined) {
         hostname = location.hostname.split('.')
     }
     let alias:string = hostname[0]
