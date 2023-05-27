@@ -30,7 +30,7 @@ import dynamic from "next/dynamic";
 import { showToast } from "./ui-lib";
 
 import {siteDesc} from '../config/siteDesc'
-const siteDescConfig:any = siteDesc()
+const siteDescConfig:any = siteDesc(location.hostname)
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
   loading: () => null,
