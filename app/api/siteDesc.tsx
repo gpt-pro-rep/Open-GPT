@@ -27,7 +27,7 @@ export const getConfigItemFiled = (item: string) => {
     if (process.browser) {
         const descInfo:any = document.getElementById('descInfo')
         const fields:any = JSON.parse(descInfo.getAttribute('content') || {})
-        val = fields(item)
+        val = fields[item]
     }
     return val
 }
