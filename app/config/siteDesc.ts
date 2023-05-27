@@ -1,7 +1,6 @@
-const currentLocation = window.location;
-
-export const siteDesc = () => {
-    let hostname:any = currentLocation.hostname
+export function siteDesc () {
+    const currentLocation = window.location;
+    let hostname:any = currentLocation.hostname;
     hostname = hostname.split('.')
     let alias = hostname[0]
 
