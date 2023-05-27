@@ -1,18 +1,13 @@
 export const siteDesc = () => {
-    let hostname:any =  ['']
-    if (process.browser) {
-        hostname = location.hostname.split('.')
-    }
-    let alias:string = hostname[0]
-
+    let alias:string = process.env.HOST_NAME || ''
     switch (alias) {
-        case 'gpt': return {
+        case 'Open-GPT': return {
             apiUrl: '',
             proName: 'Open-GPT',
             proDesc: '开放版·直连GPT聊天机器人',
             proPayUrl: 'https://e.northviewer.cn/wp-content/uploads/2023/05/code.png',
         };
-        case 'quick': return {
+        case 'Quick-Chat': return {
             apiUrl: '',
             proName: 'Quick-Chat',
             proDesc: '闪答·直连版GPT聊天机器人',
@@ -20,8 +15,8 @@ export const siteDesc = () => {
         };
         default: return {
             apiUrl: '',
-            proName: 'Open-GPT-test',
-            proDesc: '开放版·直连GPT聊天机器人',
+            proName: 'AI-Open-GPT',
+            proDesc: '智能版·直连GPT聊天机器人',
             proPayUrl: 'https://e.northviewer.cn/wp-content/uploads/2023/05/code.png',
         }
     }
