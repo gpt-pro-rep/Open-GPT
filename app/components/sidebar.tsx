@@ -29,11 +29,8 @@ import { useMobileScreen } from "../utils";
 import dynamic from "next/dynamic";
 import { showToast } from "./ui-lib";
 
-import {siteDesc} from '../config/siteDesc'
-let siteDescConfig:any = {} 
-useEffect(() => {
-  siteDescConfig = siteDesc()
-})
+import {siteDesc} from '../api/siteDesc'
+const siteDescConfig:any = siteDesc()
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
   loading: () => null,

@@ -1,11 +1,8 @@
 import axios from "axios";
 import { showModal, showToast } from "../components/ui-lib";
 import { IconButton } from "../components/button";
-import {siteDesc} from '../config/siteDesc'
-let siteDescConfig:any = {} 
-useEffect(() => {
-  siteDescConfig = siteDesc()
-})
+import {siteDesc} from './siteDesc'
+const siteDescConfig:any = siteDesc()
 
 const baseUrl =
   siteDescConfig.apiUrl ||

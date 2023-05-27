@@ -6,13 +6,8 @@ import { getBuildConfig } from "./config/build";
 
 const buildConfig = getBuildConfig();
 
-import { useEffect } from "react";
-
-import {siteDesc} from './config/siteDesc'
-let siteDescConfig:any = {} 
-useEffect(() => {
-  siteDescConfig = siteDesc()
-})
+import {siteDesc} from './api/siteDesc'
+const siteDescConfig:any = siteDesc()
 
 export const metadata = {
   title: siteDescConfig.proName,

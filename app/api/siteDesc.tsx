@@ -1,4 +1,4 @@
-export function siteDesc () {
+export const siteDesc = () => {
     let hostname:any = location.hostname.split('.') || [''];
     let alias:string = hostname[0]
 
