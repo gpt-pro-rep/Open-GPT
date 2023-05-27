@@ -1,7 +1,6 @@
 import { SubmitKey } from "../store/config";
 
-import {siteDesc,getConfigItemFiled} from '../api/siteDesc'
-const siteDescConfig:any = siteDesc()
+import {getConfigItemFiled} from '../api/siteDesc'
 
 const cn = {
   WIP: "该功能仍在开发中……",

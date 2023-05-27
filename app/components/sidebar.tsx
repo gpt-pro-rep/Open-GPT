@@ -29,8 +29,7 @@ import { useMobileScreen } from "../utils";
 import dynamic from "next/dynamic";
 import { showToast } from "./ui-lib";
 
-import {siteDesc} from '../api/siteDesc'
-const siteDescConfig:any = siteDesc()
+import {getConfigItemFiled} from '../api/siteDesc'
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
   loading: () => null,
@@ -123,9 +122,9 @@ export function SideBar(props: { className?: string }) {
       }`}
     >
       <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>{siteDescConfig.proName}</div>
+        <div className={styles["sidebar-title"]}>{getConfigItemFiled('proName')}</div>
         <div className={styles["sidebar-sub-title"]}>
-          {siteDescConfig.proDesc}
+          {getConfigItemFiled('proDesc')}
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
