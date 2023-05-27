@@ -1,7 +1,7 @@
 import axios from "axios";
 import { showModal, showToast } from "../components/ui-lib";
 import { IconButton } from "../components/button";
-import siteDesc from '../config/sitedesc'
+import {siteDesc} from '../config/siteDesc'
 const siteDescConfig = siteDesc()
 
 const baseUrl =

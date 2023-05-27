@@ -29,7 +29,7 @@ import { useMobileScreen } from "../utils";
 import dynamic from "next/dynamic";
 import { showToast } from "./ui-lib";
 
-import siteDesc from '../config/sitedesc'
+import {siteDesc} from '../config/siteDesc'
 const siteDescConfig = siteDesc()
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {

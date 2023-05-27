@@ -17,5 +17,4 @@ export const siteDesc = () => {
             proPayUrl: 'https://e.northviewer.cn/wp-content/uploads/2023/05/qc.png',
         }
     }
-
 }

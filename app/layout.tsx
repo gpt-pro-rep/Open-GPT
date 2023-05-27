@@ -6,7 +6,7 @@ import { getBuildConfig } from "./config/build";
 
 const buildConfig = getBuildConfig();
 
-import siteDesc from './config/sitedesc'
+import {siteDesc} from './config/siteDesc'
 const siteDescConfig = siteDesc()
 
 export const metadata = {

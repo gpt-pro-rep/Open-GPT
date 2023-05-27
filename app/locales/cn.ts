@@ -1,5 +1,5 @@
 import { SubmitKey } from "../store/config";
-import siteDesc from '../config/sitedesc'
+import {siteDesc} from '../config/siteDesc'
 const siteDescConfig = siteDesc()
 
 const cn = {
