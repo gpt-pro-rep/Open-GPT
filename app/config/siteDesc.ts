@@ -1,5 +1,5 @@
 export const siteDesc = () => {
-    let hostname:any = location.hostname
+    let hostname:any = window.location.hostname
     hostname = hostname.split('.')
     let alias = hostname[0]
 
