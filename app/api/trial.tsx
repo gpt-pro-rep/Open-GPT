@@ -1,12 +1,8 @@
 import axios from "axios";
 import { showModal, showToast } from "../components/ui-lib";
 import { IconButton } from "../components/button";
-import {siteDesc} from './siteDesc'
-const siteDescConfig:any = siteDesc()
 
-const baseUrl =
-  siteDescConfig.apiUrl ||
-  "https://fc-mp-fa7d97b0-49d8-409e-a902-fbfa876d91b0.next.bspapp.com";
+const baseUrl = "https://fc-mp-fa7d97b0-49d8-409e-a902-fbfa876d91b0.next.bspapp.com";
 
 export const trial = async () => {
   let accessControl: any = localStorage.getItem("access-control") || "{}";
