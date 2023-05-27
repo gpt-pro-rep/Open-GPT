@@ -20,7 +20,7 @@ export const siteDesc = () => {
         };
         default: return {
             apiUrl: '',
-            proName: 'Open-GPT',
+            proName: 'Open-GPT-test',
             proDesc: '开放版·直连GPT聊天机器人',
             proPayUrl: 'https://e.northviewer.cn/wp-content/uploads/2023/05/code.png',
         }
