@@ -32,12 +32,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  localStorage.setItem('siteDescConfig', JSON.stringify(siteDescConfig))
   return (
     <html lang="en">
       <head>
         <meta name="version" content={buildConfig.commitId} />
         <link rel="manifest" href="/site.webmanifest"></link>
+        <script>localStorage.setItem('siteDescConfig', JSON.stringify(siteDescConfig))</script>
         <script src="/serviceWorkerRegister.js" defer></script>
       </head>
       <body>{children}</body>
