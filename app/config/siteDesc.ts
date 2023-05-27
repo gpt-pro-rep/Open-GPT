@@ -1,7 +1,5 @@
-import dynamic from 'next/dynamic';
-
 export function siteDesc () {
-    let hostname:any = dynamic(() => { return location.hostname.split('.') }, { ssr: false }) || [''];
+    let hostname:any = location.hostname.split('.') || [''];
     let alias:string = hostname[0]
 
     switch (alias) {
