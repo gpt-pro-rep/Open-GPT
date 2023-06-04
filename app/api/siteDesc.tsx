@@ -7,10 +7,10 @@ export const siteDesc = () => {
             proDesc: '开放版·直连GPT聊天机器人',
             proPayUrl: 'https://e.northviewer.cn/wp-content/uploads/2023/05/code.png',
         };
-        case 'Quick-Chat': return {
+        case 'Quick-GPT': return {
             apiUrl: '',
-            proName: 'Quick-Chat',
-            proDesc: '闪答·直连版GPT聊天机器人',
+            proName: 'Quick-GPT',
+            proDesc: '直连版·Chat-GPT聊天机器人',
             proPayUrl: 'https://e.northviewer.cn/wp-content/uploads/2023/05/qc.png',
         };
         default: return {
