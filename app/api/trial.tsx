@@ -65,7 +65,7 @@ export const trial = async () => {
         showToast(
           "您的试用额度已经用完。如需继续使用，请「微信扫码」获取长久额度。",
           undefined,
-          5000,
+          6000,
         );
       }
     }
@@ -82,7 +82,7 @@ const closeModal = () => {
 const trialset = () => {
   axios.get(baseUrl + "/api/trialset").then((res: any) => {
     if (res.data.code == 1) {
-      showToast("领取成功，请直接开始会话！", undefined, 5000);
+      showToast("🎉 领取成功，请直接开始会话！", undefined, 8000);
       localStorage.setItem("trialsize", res.data.trialsize);
       closeModal();
     }
