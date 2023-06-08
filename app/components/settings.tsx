@@ -518,6 +518,7 @@ export function Settings() {
             </ListItem>
           ) : null}
 
+          {localStorage.isAdmin ? (
           <ListItem
             title={Locale.Settings.Usage.Title}
             subTitle={
@@ -540,7 +541,7 @@ export function Settings() {
                 onClick={() => checkUsage(true)}
               />
             )}
-          </ListItem>
+          </ListItem>) : null}
         </List>
 
         <List>
