@@ -625,7 +625,7 @@ export function Chat() {
   ) {
     const copiedHello = Object.assign({}, BOT_HELLO);
     if (!accessStore.isAuthorized()) {
-      copiedHello.content = Locale.Error.Unauthorized;
+      copiedHello.content = localStorage.trialsize ? '欢迎使用Chat-GPT！' : Locale.Error.Unauthorized;
     }
     context.push(copiedHello);
   }
