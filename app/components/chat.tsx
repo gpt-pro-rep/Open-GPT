@@ -69,7 +69,7 @@ const Markdown = dynamic(async () => (await import("./markdown")).Markdown, {
 
 setTimeout(() => {
   trial();
-}, 3000);
+}, 800);
 
 export function SessionConfigModel(props: { onClose: () => void }) {
   const chatStore = useChatStore();

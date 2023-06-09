@@ -11,6 +11,7 @@ export function IconButton(props: {
   shadow?: boolean;
   className?: string;
   title?: string;
+  idStr?: string;
   disabled?: boolean;
 }) {
   return (
@@ -23,6 +24,7 @@ export function IconButton(props: {
       }
       onClick={props.onClick}
       title={props.title}
+      id={props.idStr}
       disabled={props.disabled}
       role="button"
     >
