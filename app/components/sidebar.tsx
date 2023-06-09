@@ -206,6 +206,7 @@ export function SideBar(props: { className?: string }) {
         </div>
         <div>
           <IconButton
+            idStr="newChatBtn"
             icon={<AddIcon />}
             text={shouldNarrow ? undefined : Locale.Home.NewChat}
             onClick={() => {
