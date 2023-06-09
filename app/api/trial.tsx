@@ -82,7 +82,7 @@ const closeModal = () => {
 const trialset = () => {
   axios.get(baseUrl + "/api/trialset").then((res: any) => {
     if (res.data.code == 1) {
-      showToast("😄 领取成功，请您直接开始会话！😄 ", undefined, 8000);
+      showToast("🎉  领取成功，请您直接开始会话！ 🎉 ", undefined, 8000);
       let newChatBtn = document.getElementById('newChatBtn')
       if (newChatBtn) {
         newChatBtn.click()
