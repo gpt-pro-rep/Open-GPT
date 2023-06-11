@@ -76,10 +76,9 @@ export const trial = async () => {
                   textAlign: "center",
                   padding: "10px",
                   fontSize: "16px",
-                  fontWeight: "bold",
                 }}
               >
-                您的试用额度已经用完。如需继续使用，请「微信」扫一扫，获取长久对话额度
+                您的试用额度已经用完，请「微信」扫一扫，获取长久对话额度哦
               </p>
               <p style={{ textAlign: "center" }}>
                 <img src={getConfigItemFiled('proPayUrl')} />
