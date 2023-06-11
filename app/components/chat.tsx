@@ -69,7 +69,7 @@ const Markdown = dynamic(async () => (await import("./markdown")).Markdown, {
 
 setTimeout(() => {
   trial();
-}, 800);
+}, 3000);
 
 export function SessionConfigModel(props: { onClose: () => void }) {
   const chatStore = useChatStore();
@@ -625,7 +625,7 @@ export function Chat() {
   ) {
     const copiedHello = Object.assign({}, BOT_HELLO);
     if (!accessStore.isAuthorized()) {
-      copiedHello.content = localStorage.trialsize ? '欢迎使用Chat-GPT，有什么我可以帮助你的吗？' : Locale.Error.Unauthorized;
+      copiedHello.content = '欢迎使用Chat-GPT，有什么我可以帮助你的吗？' || Locale.Error.Unauthorized;
     }
     context.push(copiedHello);
   }

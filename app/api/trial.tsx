@@ -19,7 +19,7 @@ export const trial = async () => {
     let res = await axios.get(baseUrl + "/api/trial");
     if (res.data.code == 0) {
       showModal({
-        title: "系统提示",
+        title: "温馨提示",
         children: (
           <div className="markdown-body">
             <p
@@ -62,11 +62,32 @@ export const trial = async () => {
       if (res.data.trialsize == 0) {
         // localStorage.removeItem("not-mind");
         localStorage.removeItem("trialsize");
-        showToast(
-          "您的试用额度已经用完。如需继续使用，请「微信扫一扫」，获取长久额度。",
-          undefined,
-          6000,
-        );
+        // showToast(
+        //   "您的试用额度已经用完。如需继续使用，请「微信扫一扫」，获取长久额度。",
+        //   undefined,
+        //   6000,
+        // );
+        showModal({
+          title: "温馨提示",
+          children: (
+            <div className="markdown-body">
+              <p
+                style={{
+                  textAlign: "center",
+                  padding: "10px",
+                  fontSize: "16px",
+                }}
+              >
+                您的试用额度已经用完，请「微信」扫一扫，获取长久对话额度哦
+              </p>
+              <p style={{ textAlign: "center" }}>
+                <img src={getConfigItemFiled('proPayUrl')} />
+              </p>
+              <br />
+            </div>
+          ),
+          actions: [],
+        });
       }
     }
   }
@@ -82,11 +103,11 @@ const closeModal = () => {
 const trialset = () => {
   axios.get(baseUrl + "/api/trialset").then((res: any) => {
     if (res.data.code == 1) {
-      showToast("🎉  领取成功，请您直接开始会话！ 🎉 ", undefined, 8000);
-      let newChatBtn = document.getElementById('newChatBtn')
-      if (newChatBtn) {
-        newChatBtn.click()
-      }
+      showToast("🎉  领取成功，请您直接开始会话！ 🎉 ", undefined, 5000);
+      // let newChatBtn = document.getElementById('newChatBtn')
+      // if (newChatBtn) {
+      //   newChatBtn.click()
+      // }
       localStorage.setItem("trialsize", res.data.trialsize);
       closeModal();
     }
