@@ -7,7 +7,7 @@ const cn = {
     Error: {
     Unauthorized: `访问密码不正确或为空，请前往 [设置](/#/settings) 页输入正确的访问密码。
 
-试用结束了，微信扫一扫，获取更多对话额度： 
+微信扫一扫，获取更多对话额度： 
 
 ![alt 微信扫一扫](${getConfigItemFiled('proPayUrl')})`,
   },
