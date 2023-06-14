@@ -74,16 +74,16 @@ export const trial = async () => {
               <p
                 style={{
                   textAlign: "center",
-                  padding: "10px",
                   fontSize: "16px",
+                  marginBottom: '15px',
+                  lineHeight:'30px'
                 }}
               >
-                您的试用额度已经用完，请「微信」扫一扫，获取长久对话额度哦
+                您的试用额度已经用完 <br /> 请「微信」扫一扫，获取长久对话额度
               </p>
-              <p style={{ textAlign: "center" }}>
+              <div style={{ textAlign: "center" }}>
                 <img src={getConfigItemFiled('proPayUrl')} />
-              </p>
-              <br />
+              </div>
             </div>
           ),
           actions: [],
