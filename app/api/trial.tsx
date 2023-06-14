@@ -74,9 +74,8 @@ export const trial = async () => {
               <p
                 style={{
                   textAlign: "center",
-                  padding: "10px",
                   fontSize: "16px",
-                  marginBottom: '10px',
+                  marginBottom: '15px',
                   lineHeight:'30px'
                 }}
               >
