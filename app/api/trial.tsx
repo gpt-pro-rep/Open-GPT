@@ -88,7 +88,9 @@ export const trial = async () => {
               </div>
             </div>
           ),
-          actions: [],
+          actions: [
+            <span>上千用户，万分信赖</span>
+          ],
         });
       }
     }
