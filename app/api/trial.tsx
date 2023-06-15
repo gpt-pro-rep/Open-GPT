@@ -80,7 +80,7 @@ export const trial = async () => {
                 }}
               >
                 您的试用额度已经用完 <br /> 请「微信」扫一扫，获取
-                <span style={{fontWeight:'bold', color: '#e6221f'}}> 长久免费 </span>
+                <span style={{fontWeight:'bold'}}> 长久 </span>
                 对话额度
               </p>
               <div style={{ textAlign: "center" }}>
