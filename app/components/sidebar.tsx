@@ -164,7 +164,13 @@ export function SideBar(props: { className?: string }) {
       </div>
 
       <div className='sidebar-banner'>
-        <img src="https://e.northviewer.cn/wp-content/uploads/2023/06/WX20230617-124222@2x-768x413.png" style="display:block; width:100%" />
+        <img 
+          src="https://e.northviewer.cn/wp-content/uploads/2023/06/WX20230617-124222@2x-768x413.png" 
+          style={{
+            display: 'block', 
+            width: '100%'
+          }} 
+        />
       </div>
 
       <div
