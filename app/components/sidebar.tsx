@@ -164,15 +164,17 @@ export function SideBar(props: { className?: string }) {
       </div>
 
       <div className='sidebar-banner'>
-        <img 
-          src="https://e.northviewer.cn/wp-content/uploads/2023/06/WX20230617-124222@2x-768x413.png" 
-          style={{
-            display: 'block', 
-            width: '100%',
-            marginBottom: '10px',
-            borderRadius: '10px'
-          }} 
-        />
+        <a href="https://bing-go.everyone-ai.shop/" target="_blank">
+          <img 
+            src="https://e.northviewer.cn/wp-content/uploads/2023/06/WX20230617-124222@2x-768x413.png" 
+            style={{
+              display: 'block', 
+              width: '100%',
+              marginBottom: '10px',
+              borderRadius: '10px'
+            }} 
+          />
+        </a>
       </div>
 
       <div
