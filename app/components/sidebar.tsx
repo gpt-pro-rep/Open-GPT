@@ -163,6 +163,20 @@ export function SideBar(props: { className?: string }) {
         ) : null}
       </div>
 
+      <div className='sidebar-banner'>
+        <a href="https://bing-go.everyone-ai.shop/" target="_blank">
+          <img 
+            src="https://e.northviewer.cn/wp-content/uploads/2023/06/WX20230627-214828@2x.png" 
+            style={{
+              display: 'block', 
+              width: '99.2%',
+              marginBottom: '10px',
+              borderRadius: '10px'
+            }} 
+          />
+        </a>
+      </div>
+
       <div
         className={styles["sidebar-body"]}
         onClick={(e) => {
