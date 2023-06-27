@@ -79,12 +79,16 @@ export const trial = async () => {
                   lineHeight:'30px'
                 }}
               >
-                您的试用额度已经用完 <br /> 请「微信」扫一扫，获取
+                您的试用额度已经用完，或登录过期
+                <br />
+                请「微信」扫一扫，获取
                 <span style={{fontWeight:'bold'}}> 长久 </span>
                 对话额度
               </p>
               <div style={{ textAlign: "center" }}>
                 <img src={getConfigItemFiled('proPayUrl')} />
+                <br />
+                若您是会员，请扫码获取访问密码。
               </div>
             </div>
           ),
