@@ -117,7 +117,7 @@ export function SideBar(props: { className?: string }) {
   const pageAdsView = () => {
     let view = true
     const pageAds = document.getElementById('pageAds')
-    content = pageAds?.getAttribute('content')
+    const content = pageAds?.getAttribute('content')
     if (content == '0') {
       view = false
     }
