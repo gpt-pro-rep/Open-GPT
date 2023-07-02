@@ -38,6 +38,7 @@ export default function RootLayout({
         <meta name="version" content={buildConfig.commitId} />
         <link rel="manifest" href="/site.webmanifest"></link>
         <meta id="descInfo" name="author" content={JSON.stringify(siteDescConfig)} />
+        <meta id="pageAds" content={process.env.PAGE_ADS} />
         <script src="/serviceWorkerRegister.js" defer></script>
       </head>
       <body>{children}</body>
