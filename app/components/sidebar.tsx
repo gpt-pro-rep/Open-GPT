@@ -114,6 +114,15 @@ export function SideBar(props: { className?: string }) {
   const config = useAppConfig();
 
   useHotKey();
+  const pageAdsView = () => {
+    let view = true
+    const pageAds = document.getElementById('pageAds')
+    content = pageAds?.getAttribute('content')
+    if (content == '0') {
+      view = false
+    }
+    return view
+  }
 
   return (
     <div
@@ -164,17 +173,19 @@ export function SideBar(props: { className?: string }) {
       </div>
 
       <div className='sidebar-banner'>
-        <a href="https://bing-go.everyone-ai.shop/" target="_blank">
-          <img 
-            src="https://e.northviewer.cn/wp-content/uploads/2023/06/WX20230627-214828@2x.png" 
-            style={{
-              display: 'block', 
-              width: '99.2%',
-              marginBottom: '10px',
-              borderRadius: '10px'
-            }} 
-          />
-        </a>
+        { pageAdsView() ? 
+          (<a href="https://bing-go.everyone-ai.shop/" target="_blank">
+            <img 
+              src="https://e.northviewer.cn/wp-content/uploads/2023/06/WX20230627-214828@2x.png" 
+              style={{
+                display: 'block', 
+                width: '99.2%',
+                marginBottom: '10px',
+                borderRadius: '10px'
+              }} 
+            />
+          </a>): null
+        }
       </div>
 
       <div
