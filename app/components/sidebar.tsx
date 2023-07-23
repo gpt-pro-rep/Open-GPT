@@ -174,9 +174,9 @@ export function SideBar(props: { className?: string }) {
 
       <div className='sidebar-banner'>
         { pageAdsView() ? 
-          (<a href="https://bing-go.everyone-ai.shop/" target="_blank">
+          (<a href="https://gpt-4.everyone-ai.shop/" target="_blank">
             <img 
-              src="https://e.northviewer.cn/wp-content/uploads/2023/06/WX20230627-214828@2x.png" 
+              src="https://e.northviewer.cn/wp-content/uploads/2023/07/gpt-banner.png" 
               style={{
                 display: 'block', 
                 width: '99.2%',
