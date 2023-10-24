@@ -1,15 +1,19 @@
 import { SubmitKey } from "../store/config";
 
-import {getConfigItemFiled} from '../api/siteDesc'
+import { getConfigItemFiled } from "../api/siteDesc";
 
 const cn = {
   WIP: "该功能仍在开发中……",
-    Error: {
+  Error: {
     Unauthorized: `访问密码不正确或为空，请前往 [设置](/#/settings) 页输入正确的访问密码。
 
 微信扫一扫，获取更多对话额度： 
 
-![alt 微信扫一扫](${getConfigItemFiled('proPayUrl')})`,
+![alt 微信扫一扫](${getConfigItemFiled("proPayUrl")})
+
+或者👉 [点击此处](https://ai.northviewer.cn/buy/4) 直接访问，获取更多对话额度
+
+`,
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 条对话`,

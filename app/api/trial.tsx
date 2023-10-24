@@ -1,9 +1,11 @@
 import axios from "axios";
 import { showModal, showToast } from "../components/ui-lib";
 import { IconButton } from "../components/button";
-import {getConfigItemFiled} from '../api/siteDesc'
+import { getConfigItemFiled } from "../api/siteDesc";
 
-const baseUrl = getConfigItemFiled('apiUrl') || "https://fc-mp-fa7d97b0-49d8-409e-a902-fbfa876d91b0.next.bspapp.com";
+const baseUrl =
+  getConfigItemFiled("apiUrl") ||
+  "https://fc-mp-fa7d97b0-49d8-409e-a902-fbfa876d91b0.next.bspapp.com";
 
 export const trial = async () => {
   let accessControl: any = localStorage.getItem("access-control") || "{}";
@@ -75,26 +77,27 @@ export const trial = async () => {
                 style={{
                   textAlign: "center",
                   fontSize: "15px",
-                  marginBottom: '10px',
-                  lineHeight:'30px'
+                  marginBottom: "10px",
+                  lineHeight: "30px",
                 }}
               >
                 您的试用额度已经用完，或登录已过期。
                 <br />
                 请「微信」扫一扫，获取
-                <span style={{fontWeight:'bold'}}> 长久 </span>
-                对话额度
+                <span style={{ fontWeight: "bold" }}> 更多 </span>对话额度
               </p>
               <div style={{ textAlign: "center" }}>
-                <img src={getConfigItemFiled('proPayUrl')} />
+                <img src={getConfigItemFiled("proPayUrl")} />
                 <br />
-                若您是会员，请「微信扫码」获取访问密码。
+                或者👉{" "}
+                <a href="https://ai.northviewer.cn/buy/4" target="_blank">
+                  点击此处
+                </a>{" "}
+                直接访问，获取更多对话额度
               </div>
             </div>
           ),
-          actions: [
-            <span key="trialtrytip">上千用户，万分信赖</span>
-          ],
+          actions: [<span key="trialtrytip">五千用户，万分信赖</span>],
         });
       }
     }
