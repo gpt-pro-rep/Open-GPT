@@ -6,32 +6,14 @@ export const siteDesc = () => {
         apiUrl: "",
         proName: "Open-GPT",
         proDesc: "开放版·直连GPT聊天机器人",
-        proPayUrl:
-          "https://ai.northviewer.cn/uploads/images/7e78294bb60594550d25c44206e0f629.png",
-      };
-    case "Quick-GPT":
-      return {
-        apiUrl: "",
-        proName: "Quick-GPT",
-        proDesc: "直连版·Chat-GPT聊天机器人",
-        proPayUrl:
-          "https://ai.northviewer.cn/uploads/images/7e78294bb60594550d25c44206e0f629.png",
-      };
-    case "Eazy-Chat":
-      return {
-        apiUrl: "",
-        proName: "Eazy-Chat",
-        proDesc: "直连版·Chat-GPT聊天机器人",
-        proPayUrl:
-          "https://ai.northviewer.cn/uploads/images/7e78294bb60594550d25c44206e0f629.png",
+        proPayUrl: "",
       };
     default:
       return {
         apiUrl: "",
         proName: "AI-Open-GPT",
         proDesc: "智能版·直连GPT聊天机器人",
-        proPayUrl:
-          "https://ai.northviewer.cn/uploads/images/7e78294bb60594550d25c44206e0f629.png",
+        proPayUrl: "",
       };
   }
 };

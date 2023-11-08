@@ -83,10 +83,9 @@ export const trial = async () => {
               >
                 您的试用额度已经用完，或登录已过期。
                 <br />
-                请「微信」扫一扫，获取
-                <span style={{ fontWeight: "bold" }}> 更多 </span>对话额度
+                {/* 请「微信」扫一扫，获取 <span style={{ fontWeight: "bold" }}> 更多 </span>对话额度 */}
               </p>
-              <div style={{ textAlign: "center" }}>
+              {/* <div style={{ textAlign: "center" }}>
                 <img src={getConfigItemFiled("proPayUrl")} />
                 <br />
                 或者👉{" "}
@@ -94,10 +93,10 @@ export const trial = async () => {
                   点击此处
                 </a>{" "}
                 直接访问，获取更多对话额度
-              </div>
+              </div> */}
             </div>
           ),
-          actions: [<span key="trialtrytip">五千用户，万分信赖</span>],
+          // actions: [<span key="trialtrytip">五千用户，万分信赖</span>],
         });
       }
     }

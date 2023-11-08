@@ -29,7 +29,7 @@ import { useMobileScreen } from "../utils";
 import dynamic from "next/dynamic";
 import { showToast } from "./ui-lib";
 
-import {getConfigItemFiled} from '../api/siteDesc'
+import { getConfigItemFiled } from "../api/siteDesc";
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
   loading: () => null,
@@ -115,14 +115,14 @@ export function SideBar(props: { className?: string }) {
 
   useHotKey();
   const pageAdsView = () => {
-    let view = true
-    const pageAds = document.getElementById('pageAds')
-    const content = pageAds?.getAttribute('content')
-    if (content == '0') {
-      view = false
+    let view = true;
+    const pageAds = document.getElementById("pageAds");
+    const content = pageAds?.getAttribute("content");
+    if (content == "0") {
+      view = false;
     }
-    return view
-  }
+    return view;
+  };
 
   return (
     <div
@@ -131,16 +131,18 @@ export function SideBar(props: { className?: string }) {
       }`}
     >
       <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>{getConfigItemFiled('proName')}</div>
+        <div className={styles["sidebar-title"]}>
+          {getConfigItemFiled("proName")}
+        </div>
         <div className={styles["sidebar-sub-title"]}>
-          {getConfigItemFiled('proDesc')}
+          {getConfigItemFiled("proDesc")}
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
         </div>
       </div>
 
-      <div className={styles["sidebar-header-bar"]}>
+      {/* <div className={styles["sidebar-header-bar"]}>
         <IconButton
           icon={<MaskIcon />}
           text={shouldNarrow ? undefined : Locale.Mask.Name}
@@ -170,9 +172,9 @@ export function SideBar(props: { className?: string }) {
             />
           </Link>
         ) : null}
-      </div>
+      </div> */}
 
-      <div className='sidebar-banner'>
+      {/* <div className='sidebar-banner'>
         { pageAdsView() ? 
           (<a href="https://gpt4.everyone-ai.shop/" target="_blank">
             <img 
@@ -186,7 +188,7 @@ export function SideBar(props: { className?: string }) {
             />
           </a>): null
         }
-      </div>
+      </div> */}
 
       <div
         className={styles["sidebar-body"]}
