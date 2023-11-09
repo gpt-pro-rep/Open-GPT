@@ -67,9 +67,9 @@ const Markdown = dynamic(async () => (await import("./markdown")).Markdown, {
   loading: () => <LoadingIcon />,
 });
 
-setTimeout(() => {
-  trial();
-}, 3000);
+// setTimeout(() => {
+//   trial();
+// }, 3000);
 
 export function SessionConfigModel(props: { onClose: () => void }) {
   const chatStore = useChatStore();
@@ -495,7 +495,7 @@ export function Chat() {
     setIsLoading(true);
 
     // IP address 注册提示
-    await trial();
+    // await trial();
 
     chatStore.onUserInput(userInput).then(() => setIsLoading(false));
     localStorage.setItem(LAST_INPUT_KEY, userInput);
@@ -509,9 +509,9 @@ export function Chat() {
       localStorage.getItem("trialsize") &&
       localStorage.getItem("trialsize") != "0"
     ) {
-      setTimeout(() => {
-        trialupdate();
-      }, 200);
+      // setTimeout(() => {
+      //   trialupdate();
+      // }, 200);
     }
   };
 
@@ -625,7 +625,9 @@ export function Chat() {
   ) {
     const copiedHello = Object.assign({}, BOT_HELLO);
     if (!accessStore.isAuthorized()) {
-      copiedHello.content = '欢迎使用Chat-GPT，畅所欲言，释放内心疑问！' || Locale.Error.Unauthorized;
+      copiedHello.content =
+        "欢迎使用Chat-GPT，畅所欲言，释放内心疑问！" ||
+        Locale.Error.Unauthorized;
     }
     context.push(copiedHello);
   }
