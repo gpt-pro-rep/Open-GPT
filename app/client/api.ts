@@ -5,7 +5,7 @@ import { ChatGPTApi } from "./platforms/openai";
 export const ROLES = ["system", "user", "assistant"] as const;
 export type MessageRole = (typeof ROLES)[number];
 
-export const Models = ["gpt-3.5-turbo", "gpt-4"] as const;
+export const Models = ["gpt-3.5-turbo"] as const;
 export type ChatModel = ModelType;
 
 export interface RequestMessage {
@@ -111,19 +111,17 @@ export function getHeaders() {
     return trialsize && parseInt(trialsize) > 0
       ? decrypt("bXMtdGVzdC1jb2Rl")
       : accessStore.accessCode;
-  };  
+  };
 
   // use user's api key first
   if (validString(accessStore.token)) {
     headers.Authorization = makeBearer(accessStore.token);
   } else if (
-    accessStore.enabledAccessControl() &&
-    validString(accessStore.accessCode) ||
+    (accessStore.enabledAccessControl() &&
+      validString(accessStore.accessCode)) ||
     accessCodeTrim()
   ) {
-    headers.Authorization = makeBearer(
-      ACCESS_CODE_PREFIX + accessCodeTrim(),
-    );
+    headers.Authorization = makeBearer(ACCESS_CODE_PREFIX + accessCodeTrim());
   }
 
   return headers;
