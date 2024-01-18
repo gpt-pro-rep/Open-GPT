@@ -174,21 +174,24 @@ export function SideBar(props: { className?: string }) {
         ) : null}
       </div> */}
 
-      {/* <div className='sidebar-banner'>
-        { pageAdsView() ? 
-          (<a href="https://gpt4.everyone-ai.shop/" target="_blank">
-            <img 
-              src="https://e.northviewer.cn/wp-content/uploads/2023/07/gpt-banner.png" 
+      <div className="sidebar-banner">
+        {pageAdsView() ? (
+          <a
+            href="https://docs.qq.com/form/page/DTkZlbUFkZ1FnZktO"
+            target="_blank"
+          >
+            <img
+              src="/notice.png"
               style={{
-                display: 'block', 
-                width: '99.2%',
-                marginBottom: '10px',
-                borderRadius: '10px'
-              }} 
+                display: "block",
+                width: "99.2%",
+                marginBottom: "10px",
+                borderRadius: "8px",
+              }}
             />
-          </a>): null
-        }
-      </div> */}
+          </a>
+        ) : null}
+      </div>
 
       <div
         className={styles["sidebar-body"]}
